@@ -1,0 +1,15 @@
+<a class="add-education" href="#openModal"><i class="fa fa-plus fa-lg"></i> </a>
+<div id="openModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2>Add <span style="font-weight: bold;">{{chosenEducation}}</span> Education</h2>
+      <!-- <p>This modal box is created using the powers of CSS3.</p> -->
+      <input type="text"  placeholder="Search" class="searchbar" [(ngModel)]="listFilter">
+      <div *ngFor="let education of filteredEducations" class="existing-education" (click)="chooseEducation(education)">
+         {{education.title}}
+      </div>
+      <button class="save" (click)="saveEducation()">
+        <a href="#close" style="text-decoration: none; color: #2D2747;">Save</a>
+      </button>
+    </div>
+</div>

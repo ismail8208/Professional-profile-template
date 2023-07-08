@@ -1,0 +1,22 @@
+<div class="education">
+    <ul>
+       <li>
+           <i class="fa fa-university" style="margin-right: 5px;"></i>
+           <span style="font-weight: bold;">{{education!.title}}</span>  
+           <span style="font-weight: bold; display: block;">
+            <i class="fa fa-circle" style="font-size:7px;margin: 5px 5px 5px 20px;"></i>
+            {{education!.level}}</span>  
+       </li>
+       <div class="details">
+        <div class="delete" ><i class="fa fa-trash fa-lg" aria-hidden="true" (click)="deleteEducation()"></i></div>
+        <a href="#editEducation"><div class="edit"><i class='fa fa-edit fa-lg' (click)="send()"></i> 
+        </div>
+        </a>
+       </div>
+
+        <!-- <a class="edit" [routerLink]="['/edit-education', education?.id]"><i class="fa fa-edit fa-lg"></i> -->
+        <!-- </a> -->
+        <!-- <a class="edit" href="#editEducation"><i class='fa fa-edit fa-lg'></i>
+        </a> -->
+    </ul>
+</div>

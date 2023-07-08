@@ -1,0 +1,67 @@
+<div class="card-container">
+	<span class="edit">Edit</span>
+	<img class="round" [src]="personalData!.profileImage" alt="user" />
+	<h3>{{personalData!.fullName}}</h3>
+	<h6>{{personalData!.address}}</h6>
+	<p>{{personalData!.summary}} <br/> front-end developer</p>
+    <div class="follow">
+        <div>
+            {{personalData!.followers}} followers
+        </div>
+        <div>
+            {{personalData!.followings}} Following
+        </div>
+    </div>
+    <div class="buttons">
+		<button class="primary">
+			Message
+		</button>
+		<button class="primary ghost">
+			Following
+		</button>
+        <button class="primary ghost">
+			More
+		</button>
+	</div>
+
+	<!-- educations start-->
+	<div class="group" *ngIf="educations.length">
+		<h6>Educations</h6>
+        <ml-add-education (selectdEducation)="addEducation($event)" (_listFilter)="searchEducation($event)" [filteredEducations]="filteredEducations"></ml-add-education>
+		<ul *ngFor="let education of (showAllEducations ? educations : educations.slice(0, 2))">
+			<ml-education [education]="education" (educationForUpdate)="chosenEducation($event)" (educationForDeleted)="deleteEducation($event)"> </ml-education>
+            <hr class="separate">
+		</ul>
+        <span class="show-all" (click)="toggleEducations()">{{textEducationbutton}}</span>
+	</div> 
+	<ml-update-education [education]="edu" (chosenEducation)="updateEducation($event)"></ml-update-education>
+	<!-- educations end-->
+
+    <!-- skills start-->
+    <div class="group" *ngIf="skills.length">
+		<h6>Skills</h6>
+        <ml-add-skill (selectedSKill)="addSkill($event)" (_listFilter)="searchSkills($event)" [filteredSKills]="filteredSKills"></ml-add-skill>
+		<ul *ngFor="let skill of (showAllSkills ? skills : skills.slice(0, 2))">
+			<ml-skill [skill]="skill" (skillForDeleted)="deleteSkill($event)"></ml-skill>
+            <hr class="separate">
+		</ul>
+        <span class="show-all" (click)="toggleSkills()">{{textskillbutton}}</span>
+	</div> 
+	<!-- skills end -->    
+    
+
+
+
+	<!-- <div class="skills">
+		<h6>Skills</h6>
+		<ul>
+			<ml-skill></ml-skill>
+			<li>Front End Development</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>React</li>
+			<li>Node</li>
+		</ul>
+	</div> -->
+</div>

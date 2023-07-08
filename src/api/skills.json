@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "title":"HTMLm"
+    },
+    {
+        "id":2,
+        "title":"CSS"
+    },
+    {
+        "id":3,
+        "title":"JavaScript"
+    },
+    {
+        "id":4,
+        "title":"JQuery"
+    },
+    {
+        "id":5,
+        "title":"BootStrap"
+    },
+    {
+        "id":6,
+        "title":"TypeScript"
+    },
+    {
+        "id":7,
+        "title":"Angular"
+    },
+    {
+        "id":8,
+        "title":"RXJS"
+    },
+    {
+        "id":9,
+        "title":"Ngx-Bootstarp"
+    },
+    {
+        "id":10,
+        "title":"State Management"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "title": "Free Aleppo universty",
+        "level": "graduate"
+    },
+    {
+        "id":2,
+        "title": "USA",
+        "level": "student"
+    },
+    {
+        "id":3,
+        "title": "FBI",
+        "level": "graduate"
+    },
+    {
+        "id":4,
+        "title": "IYD",
+        "level": "student"
+    },
+    {
+        "id":5,
+        "title": "Idlib",
+        "level": "graduate"
+    },
+    {
+        "id":6,
+        "title": "HR",
+        "level": "graduate"
+    },
+    {
+        "id":7,
+        "title": "IT university",
+        "level": "graduate"
+    }
+]
